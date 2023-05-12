@@ -91,4 +91,37 @@ main{
     .content-section{
         padding: 2.5rem;
     }
+
+    .share-icon:hover, .share-icon:focus{
+        background-color: var(--tertiary-color);
+    }
+
+    .share-menu {
+        top: -7.1875rem;
+        left: 14.625rem;
+        padding: .9375rem 2.1875rem;
+        position: relative;
+        box-shadow: 0 0 .625rem #0003;
+        background-color: var(--primary-color);
+        border-radius: .3125rem;
+        color: var(--fouthary-color);
+        text-transform: uppercase;
+        letter-spacing: 2;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 10.625rem;
+      }
+
+      .share-menu::before {
+        content: "";
+        width: 1rem;
+        height: 1rem;
+        background-color: var(--primary-color);
+        position: absolute;
+        top: 2.6rem;
+        left: 50%;
+        transform: translateX(-50%)rotate(45deg);
+      }
 }
