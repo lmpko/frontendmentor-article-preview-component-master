@@ -1,13 +1,14 @@
 import React from 'react'
-import cardIMG from "/images/drawers.jpg"
 import avatar from "/images/avatar-michelle.jpg"
 import shareIcon from "/images/icon-share.svg"
 
 const CardComponent = () => {
   return (
     <>
-        <img src={cardIMG} alt="card-img"/>
-        <section>
+        <div className='logo'>
+            
+        </div>
+        <section className='content-section'>
             <div className='overview'>
                 <h1> Shift the overall look and feel by adding these wonderful 
                     touches to furniture in your home
@@ -18,13 +19,15 @@ const CardComponent = () => {
                     to help you make any room feel complete.
                 </p>
             </div>
-            <div className='personal'>
-                <img src={avatar} alt="avatar" />
-                <div>
-                    <h2>Michelle Appleton</h2>
-                    <span>28 Jun 2020</span>
+            <div className='personal-container'>
+                <div className='personal'>
+                    <img src={avatar} alt="avatar" className='avatar'/>
+                    <div>
+                        <h2>Michelle Appleton</h2>
+                        <span>28 Jun 2020</span>
+                    </div>
                 </div>
-                <img src={shareIcon} alt="Share"/>
+                <img src={shareIcon} alt="Share" className='share-icon'/>
             </div>
         </section>
     </>
