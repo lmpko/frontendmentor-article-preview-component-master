@@ -14,12 +14,12 @@ body{
     justify-content: center;
     align-items: center;
     margin: 0;
-    background-color: var(--tertiary-color);
+    background-color: var(--fouthary-color);
 }
 
 main{
     width: 20.3125rem;
-    background-color: var(--fouthary-color);
+    background-color:white;
     border-radius: .9375rem;
 }
 
@@ -47,6 +47,8 @@ main{
 .personal h2{
     margin: 0;
     color: var(--primary-color);
+    font-size: 13px;
+    font-weight: 700;
 }
 
 .avatar{
@@ -56,7 +58,7 @@ main{
 }
 
 .share-icon{
-    background-color: var(--tertiary-color);
+    background-color: var(--fouthary-color);
     border-radius: 50%;
     padding: .625rem;
 }
@@ -72,4 +74,21 @@ main{
 
 .overview p {
     color: var(--tertiary-color);
+}
+
+@media (min-width: 720px){
+    main{
+        display: flex;
+        width: 45rem;
+    }
+
+    .logo{
+        width: 100%;
+        height: auto;
+        border-radius: .9375rem 0 0 .9375rem;
+    }
+
+    .content-section{
+        padding: 2.5rem;
+    }
 }
