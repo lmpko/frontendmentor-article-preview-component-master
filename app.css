@@ -36,13 +36,15 @@ main{
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    padding-top: .625rem;
 }
+
 
 .personal{
     display: flex;
     align-items: center;
     color: var(--tertiary-color);
-}
+}    
 
 .personal h2{
     margin: 0;
@@ -54,19 +56,23 @@ main{
 .avatar{
     border-radius: 50%;
     width: 3.125rem;
-    padding: 0 .9375rem 0 0;
+    margin: 0 .9375rem 0 0;
 }
 
 .share-icon{
     background-color: var(--fouthary-color);
     border-radius: 50%;
     padding: .625rem;
+    z-index: 2;
 }
 
 .content-section{
     padding: 1.25rem;
 }
 
+.overview{
+    margin-bottom: 1.8125rem;
+}
 .overview h1{
     font-size: 18px;
     color: var(--primary-color);
@@ -75,6 +81,29 @@ main{
 .overview p {
     color: var(--tertiary-color);
 }
+
+.share-menu {
+    padding: 0 1.25rem;
+    position: absolute;
+    box-shadow: 0 0 .625rem #0003;
+    background-color: var(--primary-color);
+    border-radius: 0 0 .9375rem .9375rem;
+    color: var(--fouthary-color);
+    text-transform: uppercase;
+    letter-spacing: 2;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: 17.8rem;
+    height: 5.375rem;
+    z-index: 1;
+    transform: translate(0%, 253%);
+  }
+
+  .share-menu img{
+    padding: 0 .625rem;
+  }
 
 @media (min-width: 720px){
     main{
@@ -88,6 +117,10 @@ main{
         border-radius: .9375rem 0 0 .9375rem;
     }
 
+    .overview{
+        margin-bottom: 0;
+    }
+
     .content-section{
         padding: 2.5rem;
     }
@@ -97,21 +130,12 @@ main{
     }
 
     .share-menu {
-        top: -7.1875rem;
-        left: 14.625rem;
         padding: .9375rem 2.1875rem;
-        position: relative;
-        box-shadow: 0 0 .625rem #0003;
-        background-color: var(--primary-color);
         border-radius: .3125rem;
-        color: var(--fouthary-color);
-        text-transform: uppercase;
-        letter-spacing: 2;
-        display: flex;
-        flex-direction: row;
         justify-content: space-between;
-        align-items: center;
         width: 10.625rem;
+        transform: translate(226%, 290%);
+        height: auto;
       }
 
       .share-menu::before {

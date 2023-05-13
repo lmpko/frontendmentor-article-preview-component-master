@@ -4,35 +4,23 @@ import shareIcon from "/images/icon-share.svg"
 import fbIcon from "/images/icon-facebook.svg"
 import twIcon from "/images/icon-twitter.svg"
 import pinIcon from "/images/icon-pinterest.svg"
+import ShareMenuComponent from './ShareMenuComponent'
 
 const CardComponent = () => {
 
     const [showShareCard, setShowShareCard] = useState(false);
-    const shareRef = useRef(null);
+   
 
     const handleClick = () => {
         setShowShareCard(!showShareCard)
       };
-
-    const handleClickOutside = (event) => {
-        if (shareRef.current && !shareRef.current.contains(event.target)) {
-          setShowShareCard(false);
-        }
-    };
-
-    useEffect(() => {
-        window.addEventListener("click", handleClickOutside);
-    
-        return () => {
-          window.removeEventListener("click", handleClickOutside);
-        };
-      }, []);
 
   return (
     <>
         <div className='logo'>
             
         </div>
+                {showShareCard &&  <ShareMenuComponent/>}
         <section className='content-section'>
             <div className='overview'>
                 <h1> Shift the overall look and feel by adding these wonderful 
@@ -54,12 +42,7 @@ const CardComponent = () => {
                 </div>
                 <img src={shareIcon} alt="Share" className='share-icon' onClick={handleClick}/>
             </div>
-                {showShareCard && 
-                <span className='share-menu'>share 
-                    <img src={fbIcon} alt="fb" />
-                    <img src={twIcon} alt="tw" />
-                    <img src={pinIcon} alt="pin" />
-                </span>}
+                
         </section>
     </>
   )
